@@ -17,6 +17,7 @@ gem 'sass-rails', '5.0.7'
 gem 'uglifier', '4.1.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
+gem 'turbolinks'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '4.2.2'
