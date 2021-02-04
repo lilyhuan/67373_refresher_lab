@@ -36,11 +36,18 @@
     "coverage": {
       "/mnt/c/College Stuff/Junior Year/Semester 2/67373 IS Consulting Project/lab5-choretracker-starter/app/models/child.rb": [
         1,
+        1,
+        1,
         null,
+        1,
         null
       ],
       "/mnt/c/College Stuff/Junior Year/Semester 2/67373 IS Consulting Project/lab5-choretracker-starter/app/models/application_record.rb": [
         1,
+        1,
+        null
+      ],
+      "/mnt/c/College Stuff/Junior Year/Semester 2/67373 IS Consulting Project/lab5-choretracker-starter/app/models/chore.rb": [
         1,
         null
       ],
@@ -295,15 +302,11 @@
         0,
         0
       ],
-      "/mnt/c/College Stuff/Junior Year/Semester 2/67373 IS Consulting Project/lab5-choretracker-starter/app/models/chore.rb": [
-        0,
-        0
-      ],
       "/mnt/c/College Stuff/Junior Year/Semester 2/67373 IS Consulting Project/lab5-choretracker-starter/app/models/task.rb": [
         0,
         0
       ]
     },
-    "timestamp": 1612476776
+    "timestamp": 1612477182
   }
 }
