@@ -2,6 +2,11 @@ FactoryBot.define do
   
   # TODO: fill in factory blueprint for children
   factory :child do
+    first_name { "Alex" }
+    last_name { "Heimann" }
+    active { true }
+    created_at { Date.current }
+    updated_at { Date.current }
   end
 
   # factory blueprint for tasks
