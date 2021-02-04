@@ -34,16 +34,26 @@
   },
   "Unit Tests": {
     "coverage": {
-      "/mnt/c/College Stuff/Junior Year/Semester 2/67373 IS Consulting Project/lab5-choretracker-starter/app/models/task.rb": [
+      "/mnt/c/College Stuff/Junior Year/Semester 2/67373 IS Consulting Project/lab5-choretracker-starter/app/models/chore.rb": [
         1,
         1,
+        1,
+        null,
         1,
         null,
         3,
         2,
+        2,
+        2,
+        2,
+        2,
         null,
         1,
+        2,
         1,
+        null,
+        1,
+        null,
         null,
         null
       ],
@@ -52,10 +62,17 @@
         1,
         null
       ],
-      "/mnt/c/College Stuff/Junior Year/Semester 2/67373 IS Consulting Project/lab5-choretracker-starter/app/models/chore.rb": [
+      "/mnt/c/College Stuff/Junior Year/Semester 2/67373 IS Consulting Project/lab5-choretracker-starter/app/models/task.rb": [
         1,
         1,
         1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
         null
       ],
       "/mnt/c/College Stuff/Junior Year/Semester 2/67373 IS Consulting Project/lab5-choretracker-starter/app/models/child.rb": [
@@ -325,6 +342,6 @@
         0
       ]
     },
-    "timestamp": 1612477716
+    "timestamp": 1612479011
   }
 }
