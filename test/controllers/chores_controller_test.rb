@@ -2,7 +2,7 @@ require 'test_helper'
 
 class ChoresControllerTest < ActionController::TestCase
   setup do
-    @chore = chores(:one)
+    @chore = FactoryBot.create(:chore)
   end
 
   test "should get index" do

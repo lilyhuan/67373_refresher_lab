@@ -2,7 +2,7 @@ require 'test_helper'
 
 class TasksControllerTest < ActionController::TestCase
   setup do
-    @task = tasks(:one)
+    @task =  FactoryBot.create(:task)
   end
 
   test "should get index" do
@@ -18,30 +18,30 @@ class TasksControllerTest < ActionController::TestCase
 
   test "should create task" do
     assert_difference('Task.count') do
-      post :create, task: { active: @task.active, name: @task.name, points: @task.points }
+      post :create, params: { task: { active: @task.active, name: @task.name, points: @task.points } }
     end
 
     assert_redirected_to task_path(assigns(:task))
   end
 
   test "should show task" do
-    get :show, id: @task
+    get :show, params: { id: @task }
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, id: @task
+    get :edit, params: { id: @task}
     assert_response :success
   end
 
   test "should update task" do
-    patch :update, id: @task, task: { active: @task.active, name: @task.name, points: @task.points }
+    patch :update, params: { id: @task, task: { active: @task.active, name: @task.name, points: @task.points }}
     assert_redirected_to task_path(assigns(:task))
   end
 
   test "should destroy task" do
     assert_difference('Task.count', -1) do
-      delete :destroy, id: @task
+      delete :destroy, params: { id: @task }
     end
 
     assert_redirected_to tasks_path
