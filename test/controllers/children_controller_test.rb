@@ -22,6 +22,10 @@ class ChildrenControllerTest < ActionController::TestCase
     end
 
     assert_redirected_to child_path(assigns(:child))
+
+    # invalid create
+    post :create, params: { child: { active: @child.active, first_name: nil, last_name: nil } }
+    assert_template :new
   end
 
   test "should show child" do
@@ -37,6 +41,10 @@ class ChildrenControllerTest < ActionController::TestCase
   test "should update child" do
     patch :update, params: { id: @child, child: { active: @child.active, first_name: @child.first_name, last_name: @child.last_name } }
     assert_redirected_to child_path(assigns(:child))
+
+    # invalid update
+    patch :update, params: { id: @child, child: { active: @child.active, first_name: nil, last_name: @child.last_name } }
+    assert_template :edit
   end
 
   test "should destroy child" do

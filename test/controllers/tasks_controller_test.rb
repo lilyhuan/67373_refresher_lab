@@ -22,6 +22,10 @@ class TasksControllerTest < ActionController::TestCase
     end
 
     assert_redirected_to task_path(assigns(:task))
+
+    # invalid create
+    post :create, params: { task: { active: @task.active, name: @task.name, points: -1 } }
+    assert_template :new
   end
 
   test "should show task" do
@@ -37,6 +41,10 @@ class TasksControllerTest < ActionController::TestCase
   test "should update task" do
     patch :update, params: { id: @task, task: { active: @task.active, name: @task.name, points: @task.points }}
     assert_redirected_to task_path(assigns(:task))
+
+    # invalid update
+    patch :update, params: { id: @task, task: { active: @task.active, name: @task.name, points: -1 }}
+    assert_template :edit
   end
 
   test "should destroy task" do

@@ -24,6 +24,10 @@ class ChoresControllerTest < ActionController::TestCase
     end
 
     assert_redirected_to chore_path(assigns(:chore))
+
+    # invalid create
+    post :create, params: { chore: { child_id: @chore.child_id, completed: @chore.completed, due_on: "never", task_id: @chore.task_id } }
+    assert_template :new
   end
 
   test "should show chore" do
@@ -39,6 +43,10 @@ class ChoresControllerTest < ActionController::TestCase
   test "should update chore" do
     patch :update, params: { id: @chore, chore: { child_id: @chore.child_id, completed: @chore.completed, due_on: @chore.due_on, task_id: @chore.task_id } }
     assert_redirected_to chore_path(assigns(:chore))
+
+    # invalid update
+    patch :update, params: { id: @chore, chore: { child_id: @chore.child_id, completed: @chore.completed, due_on: "never", task_id: @chore.task_id } }
+    assert_template :edit
   end
 
   test "should destroy chore" do
