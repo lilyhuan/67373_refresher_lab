@@ -2,6 +2,8 @@ require 'test_helper'
 
 class ChoresControllerTest < ActionController::TestCase
   setup do
+    @child = FactoryBot.create(:child)
+    @task =  FactoryBot.create(:task)
     @chore = FactoryBot.create(:chore)
   end
 
@@ -18,30 +20,30 @@ class ChoresControllerTest < ActionController::TestCase
 
   test "should create chore" do
     assert_difference('Chore.count') do
-      post :create, chore: { child_id: @chore.child_id, completed: @chore.completed, due_on: @chore.due_on, task_id: @chore.task_id }
+      post :create, params: { chore: { child_id: @chore.child_id, completed: @chore.completed, due_on: @chore.due_on, task_id: @chore.task_id } }
     end
 
     assert_redirected_to chore_path(assigns(:chore))
   end
 
   test "should show chore" do
-    get :show, id: @chore
+    get :show, params: { id: @chore }
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, id: @chore
+    get :edit, params: { id: @chore }
     assert_response :success
   end
 
   test "should update chore" do
-    patch :update, id: @chore, chore: { child_id: @chore.child_id, completed: @chore.completed, due_on: @chore.due_on, task_id: @chore.task_id }
+    patch :update, params: { id: @chore, chore: { child_id: @chore.child_id, completed: @chore.completed, due_on: @chore.due_on, task_id: @chore.task_id } }
     assert_redirected_to chore_path(assigns(:chore))
   end
 
   test "should destroy chore" do
     assert_difference('Chore.count', -1) do
-      delete :destroy, id: @chore
+      delete :destroy, params: { id: @chore }
     end
 
     assert_redirected_to chores_path
